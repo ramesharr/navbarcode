@@ -1,0 +1,59 @@
+@media screen and (max-width: 991px) {
+    .navbar-collapse.collapse, .primary-navigation .nav.stacked-menu>li.item-more {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse.in, .navbar-toggle {
+        display: block !important;
+    }
+
+    .primary-navigation .nav>li {
+        padding: 0px;
+        width: 100%;
+    }
+
+    /*for hamburger-menu effects close icon effects*/
+    .navbar-default .navbar-toggle span.icon-bar:nth-child(2) {
+        transform: rotate(-45deg) translate(-4px, 4px);
+        transition: .25s ease-in-out;
+    }
+
+    .navbar-default .navbar-toggle span.icon-bar:nth-child(4) {
+        opacity: 0
+    }
+
+    .navbar-default .navbar-toggle span.icon-bar:nth-child(3) {
+        transform: rotate(45deg) translate(0px, 0px);
+        transition: .25s ease-in-out;
+    }
+
+    .navbar-default .navbar-toggle.collapsed span.icon-bar {
+        transform: rotate(0deg);
+        opacity: unset
+    }
+
+    /*to align the menu items left / center, align-items can be changed*/
+    .primary-navigation .nav.stacked-menu .hidden-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .primary-navigation li>a {
+        width: auto
+    }
+
+    /*multi-level element*/
+    .primary-navigation .nav>li.open>.dropdown-menu {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .primary-navigation li a .caret-block {
+        position: relative;
+    }
+}
